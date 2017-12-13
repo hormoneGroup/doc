@@ -25,7 +25,7 @@ set paste
 extension = seaslog.so
 
 ;默认log根目录
-seaslog.default_basepath = "/data/logs"
+seaslog.default_basepath = "/data/logs/app"
 
 ;默认logger目录
 seaslog.default_logger = "debug"
