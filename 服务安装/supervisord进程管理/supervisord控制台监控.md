@@ -1,19 +1,30 @@
-# beanstalkd控制台监控
+# supervisor控制台监控
 
 
 ### 1.下载代码(PHP代码)
 ```
 cd /data/web
-git clone https://github.com/ptrofimov/beanstalk_web
+git clone https://github.com/WisZhou/supervisord-monitor supervisord_web
+```
+
+### 2.修改supervisor配置文件
+```
+vim /etc/supervisord.conf
+
+配置打开并修改
+[inet_http_server]
+port=*:9001
 ```
 
 ### 2.配置虚拟域名
 ```
 server {
     listen      80;
-    server_name dev.beanstalk.com;
-    set         $root_path '/data/web/beanstalk_web/public';
+    server_name dev.supervisord.com;
+    set         $root_path '/data/web/supervisord_web/public';
     root        $root_path;
+
+    #access_log  /data/logs/access/dev.api.com/access.log;
 
     index index.php index.html index.htm;
 
@@ -53,7 +64,9 @@ systemctl reload nginx
 
 ### 4.浏览器访问
 ```
-http://dev.beanstalk.com
+http://dev.supervisord.com
 ```
+
+
 
 

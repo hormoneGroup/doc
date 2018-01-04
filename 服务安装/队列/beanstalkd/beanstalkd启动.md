@@ -52,8 +52,8 @@ startretries=3                          ; 启动失败时的最多重试次数 �
 ;stopsignal=KILL                         ; 用来杀死进程的信号
 ;stopwaitsecs=10                        ; 发送SIGKILL前的等待时间
 redirect_stderr=true                     ; 重定向stderr到stdout
-stdout_logfile=/data/logs/error/supervisord/beanstalkd_stdout_11311.log
-stderr_logfile=/data/logs/error/supervisord/beanstalkd_stderr_11311.log
+stdout_logfile=/data/logs/error/supervisor/beanstalkd_11311_stdout.log
+stderr_logfile=/data/logs/error/supervisor/beanstalkd_11311_stderr.log
 ```
 
 > 4.supervisord启动beanstalkd
