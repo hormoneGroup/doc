@@ -29,5 +29,7 @@ donkeyid.node_id = 0
 donkeyid.epoch = 0
 ```
 
-
-
+### 3.重启php-fpm
+```
+systemctl reload php-fpm
+```

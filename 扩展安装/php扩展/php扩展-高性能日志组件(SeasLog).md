@@ -88,3 +88,7 @@ seaslog.throw_exception = 1
 seaslog.ignore_warning = 1
 ```
 
+### 3.重启php-fpm
+```
+systemctl reload php-fpm
+```
